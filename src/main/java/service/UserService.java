@@ -3,6 +3,7 @@ package service;
 import exception.Errorcode;
 import exception.GlobalException;
 import lombok.RequiredArgsConstructor;
+import model.Form.LoginForm;
 import model.Form.UserForm;
 import model.entity.User;
 import model.repository.UserRepository;
@@ -31,4 +32,16 @@ public class UserService {
         throw new GlobalException(Errorcode.TO_SHORT_PASSWORD);
     }
 
+    public Boolean userSignIn(LoginForm loginForm){
+        User user = userRepository.findByUserEmail(loginForm.getUserEmail())
+                .orElseThrow(()->new GlobalException(Errorcode.NOT_FIND_EMAIL_USER));
+
+        if(!user.getUserEmail().equals(loginForm.getUserEmail())){
+            throw new GlobalException(Errorcode.NOT_CORRECT_EMAIL_USER);
+        } else if (!passwordEncoder.matches(loginForm.getPassword(), user.getPassword())) {
+            throw new GlobalException(Errorcode.NOT_CORRECT_PASSWORD_USER);
+        }else{
+            return true;
+        }
+    }
 }
