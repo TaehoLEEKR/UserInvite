@@ -1,5 +1,6 @@
 package controller;
 
+import common.JwtTokenInfo;
 import lombok.RequiredArgsConstructor;
 import model.Form.LoginForm;
 import model.Form.UserForm;
@@ -23,7 +24,7 @@ public class UserController {
         return ResponseEntity.ok(userService.userSignUp(userForm));
     }
     @PostMapping("/sign-in")
-    public ResponseEntity<Boolean> userSignIn(@RequestBody @Valid LoginForm loginForm){
+    public ResponseEntity<JwtTokenInfo> userSignIn(@RequestBody @Valid LoginForm loginForm){
         return ResponseEntity.ok(userService.userSignIn(loginForm));
     }
 }
