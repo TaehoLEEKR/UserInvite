@@ -1,4 +1,4 @@
-package config;
+package com.example.userinviteassgin.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;

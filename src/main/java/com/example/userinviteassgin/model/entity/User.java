@@ -1,4 +1,4 @@
-package model.entity;
+package com.example.userinviteassgin.model.entity;
 
 
 import lombok.*;
@@ -23,6 +23,8 @@ public class User {
     private String userName;
 
     private String userEmail;
+
     private String phone;
+
 
 }

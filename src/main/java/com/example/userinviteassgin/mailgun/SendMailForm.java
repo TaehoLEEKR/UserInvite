@@ -1,4 +1,4 @@
-package client.mailgun;
+package com.example.userinviteassgin.mailgun;
 
 import lombok.*;
 

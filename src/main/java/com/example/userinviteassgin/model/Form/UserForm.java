@@ -1,8 +1,8 @@
-package model.Form;
+package com.example.userinviteassgin.model.Form;
 
 
+import com.example.userinviteassgin.model.entity.User;
 import lombok.*;
-import model.entity.User;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
@@ -24,7 +24,7 @@ public class UserForm {
     private String phone;
 
 
-    public  User toEntity(){
+    public User toEntity(){
         return User.builder()
                 .userEmail(userEmail)
                 .userName(userName)
