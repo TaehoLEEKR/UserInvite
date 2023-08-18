@@ -1,11 +1,12 @@
-package model.Form;
+package com.example.userinviteassgin.model.Form;
 
 
 import lombok.*;
-import model.entity.User;
+import com.example.userinviteassgin.model.entity.User;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
+import java.util.Collections;
 
 @Getter
 @Setter
@@ -30,6 +31,7 @@ public class UserForm {
                 .userName(userName)
                 .password(password)
                 .phone(phone)
+                .roles(Collections.singletonList("NOT_VALID_USER"))
                 .build();
     }
 }

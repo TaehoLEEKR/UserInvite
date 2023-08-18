@@ -1,6 +1,6 @@
-package model.repository;
+package com.example.userinviteassgin.model.repository;
 
-import model.entity.User;
+import com.example.userinviteassgin.model.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

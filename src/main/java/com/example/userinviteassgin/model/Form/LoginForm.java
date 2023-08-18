@@ -1,4 +1,4 @@
-package model.Form;
+package com.example.userinviteassgin.model.Form;
 
 
 import lombok.AllArgsConstructor;

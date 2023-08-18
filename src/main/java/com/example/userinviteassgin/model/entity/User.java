@@ -1,4 +1,4 @@
-package model.entity;
+package com.example.userinviteassgin.model.entity;
 
 
 import lombok.*;
@@ -18,6 +18,7 @@ import java.util.stream.Collectors;
 @Getter
 @Setter
 @Entity
+    @Table(name="MemberUsers")
 @Builder
 public class User implements UserDetails {
     @Id
@@ -29,7 +30,7 @@ public class User implements UserDetails {
     private String userEmail;
     private String phone;
 
-    @ElementCollection(fetch = FetchType.LAZY)
+    @ElementCollection(fetch = FetchType.EAGER)
     @Builder.Default
     private List<String> roles = new ArrayList<>();
 
@@ -43,7 +44,7 @@ public class User implements UserDetails {
 
     @Override
     public String getUsername() {
-        return String.valueOf(userId);
+        return userEmail;
     }
 
     @Override
