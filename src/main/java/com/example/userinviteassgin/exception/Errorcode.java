@@ -1,4 +1,4 @@
-package exception;
+package com.example.userinviteassgin.exception;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

@@ -1,15 +1,16 @@
-package controller;
+package com.example.userinviteassgin.controller;
 
-import common.JwtTokenInfo;
+
+import com.example.userinviteassgin.component.JwtToken;
 import lombok.RequiredArgsConstructor;
-import model.Form.LoginForm;
-import model.Form.UserForm;
+import com.example.userinviteassgin.model.Form.LoginForm;
+import com.example.userinviteassgin.model.Form.UserForm;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import service.UserService;
+import com.example.userinviteassgin.service.UserService;
 
 import javax.validation.Valid;
 
@@ -24,7 +25,7 @@ public class UserController {
         return ResponseEntity.ok(userService.userSignUp(userForm));
     }
     @PostMapping("/sign-in")
-    public ResponseEntity<JwtTokenInfo> userSignIn(@RequestBody @Valid LoginForm loginForm){
+    public ResponseEntity<JwtToken> userSignIn(@RequestBody @Valid LoginForm loginForm){
         return ResponseEntity.ok(userService.userSignIn(loginForm));
     }
 }

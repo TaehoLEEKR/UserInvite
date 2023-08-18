@@ -1,4 +1,4 @@
-package config;
+package com.example.userinviteassgin.config;
 
 import feign.auth.BasicAuthRequestInterceptor;
 import org.springframework.beans.factory.annotation.Qualifier;
