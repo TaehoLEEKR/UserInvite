@@ -27,6 +27,8 @@ public class User implements UserDetails {
     private String password;
     private String userName;
 
+    private String verificationCode;
+    private Boolean verificationStatus;
     private String userEmail;
     private String phone;
 

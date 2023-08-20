@@ -1,4 +1,4 @@
-package client.mailgun;
+package com.example.userinviteassgin.client.mailgun;
 
 
 import org.springframework.beans.factory.annotation.Qualifier;

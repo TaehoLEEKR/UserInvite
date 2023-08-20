@@ -24,13 +24,13 @@ public class UserForm {
     @NotNull(message = "전화번호를 입력해주세요")
     private String phone;
 
-
     public  User toEntity(){
         return User.builder()
                 .userEmail(userEmail)
                 .userName(userName)
                 .password(password)
                 .phone(phone)
+                .verificationStatus(false)
                 .roles(Collections.singletonList("NOT_VALID_USER"))
                 .build();
     }
