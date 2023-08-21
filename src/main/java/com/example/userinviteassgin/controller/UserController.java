@@ -30,6 +30,7 @@ public class UserController {
     @GetMapping("/verify")
     public ResponseEntity<String> verificationUser(@RequestParam String userEmail, @RequestParam String code){
         log.error("userEmail = "+userEmail +"code = " + code);
+        log.info("test");
         return ResponseEntity.ok(userService.verifyEmail(userEmail,code));
     }
 }
